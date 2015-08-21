@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -12,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{c3388d97-aae2-4dbf-b758-37c7249f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{4368a90f-eb20-487d-a90b-22653dedc8e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\GeometryPlotterApp.cpp">
@@ -26,6 +33,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GeometryPlotterApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -33,5 +43,73 @@
     <ResourceCompile Include="Resources.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\src\GUI\GUI.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIBoxPanel.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIElement.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIPushButton.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIPushHandler.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIRadioGroup.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUISlideMenu.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUISlider.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIText.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIToggleButton.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIToggleHandler.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUIFrontEnd.h">
+      <Filter>Header Files</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUISliderHandler.h">
+      <Filter>Header Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUI.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIBoxPanel.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIPushButton.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIRadioGroup.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUISlideMenu.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUISlider.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIText.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUI\GUIToggleButton.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </Text>
+    <Text Include="..\src\GUIFrontEnd.cpp">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

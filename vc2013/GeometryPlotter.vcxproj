@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -110,6 +111,31 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\src\GeometryPlotterApp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\src\GUIFrontEnd.cpp" />
+    <Text Include="..\src\GUIFrontEnd.h" />
+    <Text Include="..\src\GUI\GUI.cpp" />
+    <Text Include="..\src\GUI\GUI.h" />
+    <Text Include="..\src\GUI\GUIBoxPanel.cpp" />
+    <Text Include="..\src\GUI\GUIBoxPanel.h" />
+    <Text Include="..\src\GUI\GUIElement.h" />
+    <Text Include="..\src\GUI\GUIPushButton.cpp" />
+    <Text Include="..\src\GUI\GUIPushButton.h" />
+    <Text Include="..\src\GUI\GUIPushHandler.h" />
+    <Text Include="..\src\GUI\GUIRadioGroup.cpp" />
+    <Text Include="..\src\GUI\GUIRadioGroup.h" />
+    <Text Include="..\src\GUI\GUISlideMenu.cpp" />
+    <Text Include="..\src\GUI\GUISlideMenu.h" />
+    <Text Include="..\src\GUI\GUISlider.cpp" />
+    <Text Include="..\src\GUI\GUISlider.h" />
+    <Text Include="..\src\GUI\GUISliderHandler.h" />
+    <Text Include="..\src\GUI\GUIText.cpp" />
+    <Text Include="..\src\GUI\GUIText.h" />
+    <Text Include="..\src\GUI\GUIToggleButton.cpp" />
+    <Text Include="..\src\GUI\GUIToggleButton.h" />
+    <Text Include="..\src\GUI\GUIToggleHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
