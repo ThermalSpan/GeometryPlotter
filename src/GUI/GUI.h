@@ -30,7 +30,7 @@ class GUI
 
         ~GUI ();
     
-        void update (float elapsedTime);
+        void update (float elapsedTime, Vec2i mousePos);
 
         void draw ();
 

@@ -1,4 +1,8 @@
+#pragma once 
+
 #include "GUI.h"
+
+using namespace ci;
 
 class GUIElement;
 
@@ -15,5 +19,11 @@ class GUIElement
         virtual void draw () = 0;
         virtual void draw (float x, float y) = 0;
         virtual void update (float elapsedTime, Vec2i mouseLocation) = 0;
-        virtual float getHeight () = 0;
+    
+        float GetWidth () { return m_width; };
+        float GetHeight() { return m_height; };
+        
+    protected:
+        float m_height;
+        float m_width;
     };

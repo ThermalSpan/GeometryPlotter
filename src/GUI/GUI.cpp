@@ -1,5 +1,7 @@
 #include "GUI.h"
 
+using namespace ci;
+
 GUI::GUI ()
     {
     m_elemList = std::make_unique <ElemList> ();
@@ -10,11 +12,11 @@ GUI::~GUI ()
 
     }
 
-void GUI::update (float elapsedTime)
+void GUI::update (float elapsedTime, Vec2i mousePos)
     {
     for (GUIElemPtr elem : *m_elemList)
         {
-        elem->update (elapsedTime);
+        elem->update (elapsedTime, mousePos);
         }
     }
 

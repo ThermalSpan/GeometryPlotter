@@ -59,6 +59,7 @@
 		46C0A2CC1B86C03D00D299E3 /* GUIText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIText.h; path = ../src/GUI/GUIText.h; sourceTree = "<group>"; };
 		46C0A2CD1B86C03D00D299E3 /* GUIToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIToggleButton.h; path = ../src/GUI/GUIToggleButton.h; sourceTree = "<group>"; };
 		46C0A2CE1B86C03D00D299E3 /* GUIToggleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIToggleHandler.h; path = ../src/GUI/GUIToggleHandler.h; sourceTree = "<group>"; };
+		46C0A2CF1B86E5A100D299E3 /* GeometryPlotterApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeometryPlotterApp.h; path = ../src/GeometryPlotterApp.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		729E02117F064619AB3AAA26 /* GeometryPlotterApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = GeometryPlotterApp.cpp; path = ../src/GeometryPlotterApp.cpp; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 			children = (
 				46C0A2AF1B86BFAD00D299E3 /* GUI */,
 				9F4544B42A5F47048240562B /* Resources.h */,
+				46C0A2CF1B86E5A100D299E3 /* GeometryPlotterApp.h */,
 				2091ABAA17944A06A84FC0C1 /* GeometryPlotter_Prefix.pch */,
 			);
 			name = Headers;
@@ -347,8 +349,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CINDER_PATH = "../../software/cinder_0.8-2.6_mac";
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CINDER_PATH = "../../../software/cinder_0.8-2.6_mac";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -364,8 +366,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CINDER_PATH = "../../software/cinder_0.8-2.6_mac";
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CINDER_PATH = "../../../software/cinder_0.8-2.6_mac";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
