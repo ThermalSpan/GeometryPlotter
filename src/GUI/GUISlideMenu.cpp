@@ -1,4 +1,4 @@
-#include "GUISlideMenu.h"
+#include "GUI.h"
 
 using namespace ci;
 
@@ -18,6 +18,7 @@ GUISlideMenu::GUISlideMenu ()
     m_elemList = std::make_unique <ElemList> ();
     
     m_backColor = ColorAf (0.5f, 0.0f, 0.5f, 0.3f);
+    m_highColor = ColorAf (0.0f, 0.0f, 0.0f, 1.0f);
     
     Vec2f p1 (0.0f, 0.0f);
     Vec2f p2 (m_width, m_height);
@@ -43,13 +44,18 @@ void GUISlideMenu::draw (float tranX, float tranY)
 {
     float curY = m_yOffset;
     
-    gl::color (m_backColor);
-    gl::drawSolidRect(m_tabRec, false);
     
+    gl::color (m_backColor);
+    gl::drawSolidRect (m_tabRec, false);
+    if (m_state > 0) gl::drawSolidRect (m_mainRec, false);
+    
+    gl::color (m_highColor);
+    gl::lineWidth (3);
+    gl::drawStrokedRoundedRect (m_tabRec, 1, 10);
+    if (m_state > 0)gl::drawStrokedRoundedRect (m_mainRec, 1, 10);
+
     if (m_state > 0)
     {
-        
-        gl::drawSolidRect(m_mainRec, false);
         for (GUIElemPtr elem: *m_elemList)
         {
             elem->draw (m_translate, curY);
@@ -59,10 +65,10 @@ void GUISlideMenu::draw (float tranX, float tranY)
     
 }
 
-void GUISlideMenu::update (float elapsedTime, Vec2i mousePos)
+void GUISlideMenu::update (float elapsedTime, Vec2i mousePos, bool mousePressed)
 {
     m_mouseOver = m_mainRec.contains (mousePos) || m_tabRec.contains (mousePos);
-    float dif = elapsedTime * m_speedFactor * sin (m_state * M_PI);
+    float dif = elapsedTime * m_speedFactor * sinf (m_state * (float)M_PI);
     
     // Mouse over, not fully extended
     if (m_mouseOver && m_state < 1.0f)
@@ -84,7 +90,7 @@ void GUISlideMenu::update (float elapsedTime, Vec2i mousePos)
     {
         for (GUIElemPtr elem : *m_elemList)
         {
-            elem->update (elapsedTime, mousePos);
+            elem->update (elapsedTime, mousePos, mousePressed);
         }
     }
     
@@ -95,13 +101,18 @@ void GUISlideMenu::update (float elapsedTime, Vec2i mousePos)
     x2 = m_translate + m_width;
     y1 = 0.0f;
     y2 = m_height;
-    m_mainRec.set (x1, y2, x2, y2);
+    m_mainRec.set (x1, y1, x2, y2);
     
     x1 = m_translate + m_width;
     x2 = m_translate + m_width + m_tabWidth;
     y1 = m_tabYOffset;
     y2 = m_tabYOffset + m_tabHeight;
-    m_tabRec.set (x1, y2, x2, y2);
+    m_tabRec.set (x1, y1, x2, y2);
+
+
+    for (GUIElemPtr elem : *m_elemList) {
+        elem->update (elapsedTime, mousePos, mousePressed);
+    }
 }
 
 void GUISlideMenu::add (const GUIElemPtr &element)
@@ -112,4 +123,9 @@ void GUISlideMenu::add (const GUIElemPtr &element)
 void GUISlideMenu::remove (const GUIElemPtr &element)
 {
     m_elemList->remove (element);
+}
+
+void GUISlideMenu::resize (float windowWidth, float windowHeight)
+{
+    m_height = windowHeight;
 }

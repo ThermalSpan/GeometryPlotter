@@ -41,7 +41,7 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\ to $(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
@@ -112,30 +112,83 @@
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="..\src\GeometryPlotterApp.h" />
+    <ClInclude Include="..\src\GUI\GUITabMenu.h" />
+    <ClInclude Include="..\src\GUI\Resizable.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\src\GUIFrontEnd.cpp" />
-    <Text Include="..\src\GUIFrontEnd.h" />
-    <Text Include="..\src\GUI\GUI.cpp" />
-    <Text Include="..\src\GUI\GUI.h" />
-    <Text Include="..\src\GUI\GUIBoxPanel.cpp" />
-    <Text Include="..\src\GUI\GUIBoxPanel.h" />
-    <Text Include="..\src\GUI\GUIElement.h" />
-    <Text Include="..\src\GUI\GUIPushButton.cpp" />
-    <Text Include="..\src\GUI\GUIPushButton.h" />
-    <Text Include="..\src\GUI\GUIPushHandler.h" />
-    <Text Include="..\src\GUI\GUIRadioGroup.cpp" />
-    <Text Include="..\src\GUI\GUIRadioGroup.h" />
-    <Text Include="..\src\GUI\GUISlideMenu.cpp" />
-    <Text Include="..\src\GUI\GUISlideMenu.h" />
-    <Text Include="..\src\GUI\GUISlider.cpp" />
-    <Text Include="..\src\GUI\GUISlider.h" />
-    <Text Include="..\src\GUI\GUISliderHandler.h" />
-    <Text Include="..\src\GUI\GUIText.cpp" />
-    <Text Include="..\src\GUI\GUIText.h" />
-    <Text Include="..\src\GUI\GUIToggleButton.cpp" />
-    <Text Include="..\src\GUI\GUIToggleButton.h" />
-    <Text Include="..\src\GUI\GUIToggleHandler.h" />
+    <ClCompile Include="..\src\GUIFrontEnd.cpp" />
+    <ClInclude Include="..\src\GUIFrontEnd.h">
+      <FileType>Text</FileType>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUI.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUI.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUIBoxPanel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUIBoxPanel.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIElement.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUIPushButton.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUIPushButton.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIPushHandler.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUIRadioGroup.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUIRadioGroup.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUISlideMenu.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUISlideMenu.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUISlider.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUISlider.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUISliderHandler.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUITabMenu.cpp" />
+    <ClCompile Include="..\src\GUI\GUIText.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUIText.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="..\src\GUI\GUIToggleButton.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </ClCompile>
+    <ClInclude Include="..\src\GUI\GUIToggleButton.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIToggleHandler.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

@@ -24,12 +24,42 @@
     <ClCompile Include="..\src\GeometryPlotterApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\GeometryPlotterApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClCompile Include="..\src\GeometryPlotterApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUI.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUIBoxPanel.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUIPushButton.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUIRadioGroup.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUISlideMenu.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUISlider.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUIText.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUIToggleButton.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUIFrontEnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI\GUITabMenu.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -38,78 +68,55 @@
     <ClInclude Include="..\src\GeometryPlotterApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\GUI\GUI.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIBoxPanel.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIElement.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIPushButton.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIPushHandler.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIRadioGroup.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUISlideMenu.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUISlider.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUISliderHandler.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIText.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIToggleButton.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUIToggleHandler.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUIFrontEnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\Resizable.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI\GUITabMenu.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\src\GUI\GUI.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIBoxPanel.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIElement.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIPushButton.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIPushHandler.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIRadioGroup.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUISlideMenu.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUISlider.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIText.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIToggleButton.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIToggleHandler.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUIFrontEnd.h">
-      <Filter>Header Files</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUISliderHandler.h">
-      <Filter>Header Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUI.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIBoxPanel.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIPushButton.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIRadioGroup.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUISlideMenu.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUISlider.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIText.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUI\GUIToggleButton.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </Text>
-    <Text Include="..\src\GUIFrontEnd.cpp">
-      <Filter>Source Files</Filter>
-    </Text>
   </ItemGroup>
 </Project>

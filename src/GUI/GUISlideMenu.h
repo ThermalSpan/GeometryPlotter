@@ -4,7 +4,11 @@
 
 using namespace ci;
 
-class GUISlideMenu : public GUIElement
+class GUISlideMenu;
+
+typedef std::shared_ptr <GUISlideMenu> slideMenuPtr;
+
+class GUISlideMenu : public GUIElement, public Resizable
     {
     public:
         GUISlideMenu ();
@@ -15,22 +19,33 @@ class GUISlideMenu : public GUIElement
 
         void draw (float x, float y);
 
-        void update (float elapsedTime, Vec2i mouseLocation);
+        void update (float elapsedTime, Vec2i mouseLocation, bool mousePressed);
 
         void add (const GUIElemPtr &element);
 
         void remove (const GUIElemPtr &element);
-        
-        void SetBackColor (const ColorAf backColor) { m_backColor = backColor; }
+
+        void resize (float windowWidth, float windowHeight);
         
         void SetYOffset (float yOffset) { m_yOffset = yOffset; }
             
         void SetWidth (float width) { m_width = width; }
 
-    protected:
+        void SetHeight (float height) { m_height = height; }
 
-        // Is the mouse over the menu?
-        bool m_mouseOver;
+        void SetTabHeight (float tabHeight) { m_tabHeight = tabHeight; }
+
+        void SetTabWidth (float tabWidth) { m_tabWidth = tabWidth;  }
+
+        void SetTabOffset (float yOffset) { m_tabYOffset = yOffset;  }
+
+        void SetBackColor (const ColorAf &backColor) { m_backColor = backColor; }
+
+        void SetHighColor (const ColorAf &highColor) { m_highColor = highColor; }
+
+        bool isMouseOver () { return m_mouseOver;  }
+
+    protected:
 
         // Describes the state of extension, strictly [0,1]
         float m_state;
@@ -44,10 +59,13 @@ class GUISlideMenu : public GUIElement
         // How far down is the first menu item?
         float m_yOffset;
         
+        // How tall is the tab?
         float m_tabHeight;
         
+        // How wide is the tab?
         float m_tabWidth;
         
+        // How far from the top of the window is the top of the tab?
         float m_tabYOffset;
         
         // List of sub elements
@@ -55,7 +73,10 @@ class GUISlideMenu : public GUIElement
         
         // Background color for main rectangle
         ColorAf m_backColor;
-        
+
+        // Highlight color for rectangle edges
+        ColorAf m_highColor;
+
         // Rectangle for main menu
         Rectf m_mainRec;
         
