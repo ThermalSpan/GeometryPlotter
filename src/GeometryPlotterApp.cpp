@@ -14,7 +14,7 @@ void GeometryPlotterApp::setup()
     CameraPersp cam;
     cam.setEyePoint (Vec3f (5.0f, 10.0f, 10.0f));
     cam.setCenterOfInterestPoint (Vec3f (0.0f, 2.5f, 0.0f));
-    cam.setPerspective (60.0f, getWindowAspectRatio (), 1.0f, 1000.0f);
+    cam.setPerspective (60.0f, getWindowAspectRatio (), 0.01f, 1000.0f);
     m_mayaCam.setCurrentCam (cam);
 
     buildGUI ();

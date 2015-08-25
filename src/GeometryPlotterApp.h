@@ -1,9 +1,4 @@
-#include "cinder/app/AppNative.h"
-#include "cinder/gl/gl.h"
-#include "cinder/MayaCamUI.h"
-
-
-#include "GUI/GUI.h"
+#include "stdafx.h"
 
 using namespace ci;
 using namespace ci::app;

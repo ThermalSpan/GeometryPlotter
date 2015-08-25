@@ -107,19 +107,24 @@
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\FileHandler.cpp" />
     <ClCompile Include="..\src\GeometryPlotterApp.cpp" />
+    <ClCompile Include="..\src\Plane.cpp" />
+    <ClCompile Include="..\src\PLine.cpp" />
+    <ClCompile Include="..\src\Point.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\src\FileHandler.h" />
     <ClInclude Include="..\src\GeometryPlotterApp.h" />
     <ClInclude Include="..\src\GUI\GUITabMenu.h" />
     <ClInclude Include="..\src\GUI\Resizable.h" />
+    <ClInclude Include="..\src\Plane.h" />
+    <ClInclude Include="..\src\PLine.h" />
+    <ClInclude Include="..\src\Point.h" />
+    <ClInclude Include="..\src\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\GUIFrontEnd.cpp" />
-    <ClInclude Include="..\src\GUIFrontEnd.h">
-      <FileType>Text</FileType>
-    </ClInclude>
     <ClCompile Include="..\src\GUI\GUI.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
