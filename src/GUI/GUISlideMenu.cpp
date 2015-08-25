@@ -10,6 +10,7 @@ GUISlideMenu::GUISlideMenu ()
     m_translate = -m_width;
     m_height = 500;
     m_speedFactor = 8.0f;
+    m_xOffset = 50;
     m_yOffset = 100.0f;
     m_tabHeight = 100;
     m_tabWidth = 50;
@@ -58,7 +59,7 @@ void GUISlideMenu::draw (float tranX, float tranY)
     {
         for (GUIElemPtr elem: *m_elemList)
         {
-            elem->draw (m_translate, curY);
+            elem->draw (m_translate + m_xOffset, curY);
             curY += elem->GetHeight();
         }
     }

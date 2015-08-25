@@ -44,6 +44,8 @@ protected:
     float m_bRad;
     
     float m_xPos;
+    
+    float m_yPos;
 
     float m_bPos;
 

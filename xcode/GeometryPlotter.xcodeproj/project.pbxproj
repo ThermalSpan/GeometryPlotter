@@ -12,7 +12,7 @@
 		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
-		46C0A2B21B86C00A00D299E3 /* GUIFrontEnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46C0A2B11B86C00A00D299E3 /* GUIFrontEnd.cpp */; };
+		464E2FAC1B8CAE8D005C57B4 /* GUITabMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 464E2FAB1B8CAE8D005C57B4 /* GUITabMenu.cpp */; };
 		46C0A2BB1B86C02A00D299E3 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46C0A2B31B86C02A00D299E3 /* GUI.cpp */; };
 		46C0A2BC1B86C02A00D299E3 /* GUIBoxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46C0A2B41B86C02A00D299E3 /* GUIBoxPanel.cpp */; };
 		46C0A2BD1B86C02A00D299E3 /* GUIPushButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46C0A2B51B86C02A00D299E3 /* GUIPushButton.cpp */; };
@@ -38,7 +38,9 @@
 		2091ABAA17944A06A84FC0C1 /* GeometryPlotter_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = GeometryPlotter_Prefix.pch; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		46C0A2B11B86C00A00D299E3 /* GUIFrontEnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GUIFrontEnd.cpp; path = ../src/GUIFrontEnd.cpp; sourceTree = "<group>"; };
+		464E2FAB1B8CAE8D005C57B4 /* GUITabMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GUITabMenu.cpp; path = ../src/GUI/GUITabMenu.cpp; sourceTree = "<group>"; };
+		464E2FAD1B8CAE9E005C57B4 /* GUITabMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUITabMenu.h; path = ../src/GUI/GUITabMenu.h; sourceTree = "<group>"; };
+		464E2FAE1B8CB14B005C57B4 /* Resizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resizable.h; path = ../src/GUI/Resizable.h; sourceTree = "<group>"; };
 		46C0A2B31B86C02A00D299E3 /* GUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GUI.cpp; path = ../src/GUI/GUI.cpp; sourceTree = "<group>"; };
 		46C0A2B41B86C02A00D299E3 /* GUIBoxPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GUIBoxPanel.cpp; path = ../src/GUI/GUIBoxPanel.cpp; sourceTree = "<group>"; };
 		46C0A2B51B86C02A00D299E3 /* GUIPushButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GUIPushButton.cpp; path = ../src/GUI/GUIPushButton.cpp; sourceTree = "<group>"; };
@@ -100,7 +102,6 @@
 			children = (
 				46C0A2B01B86BFB500D299E3 /* GUI */,
 				729E02117F064619AB3AAA26 /* GeometryPlotterApp.cpp */,
-				46C0A2B11B86C00A00D299E3 /* GUIFrontEnd.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -182,6 +183,8 @@
 		46C0A2AF1B86BFAD00D299E3 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				464E2FAE1B8CB14B005C57B4 /* Resizable.h */,
+				464E2FAD1B8CAE9E005C57B4 /* GUITabMenu.h */,
 				46C0A2C31B86C03D00D299E3 /* GUI.h */,
 				46C0A2C41B86C03D00D299E3 /* GUIBoxPanel.h */,
 				46C0A2C51B86C03D00D299E3 /* GUIElement.h */,
@@ -201,6 +204,7 @@
 		46C0A2B01B86BFB500D299E3 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				464E2FAB1B8CAE8D005C57B4 /* GUITabMenu.cpp */,
 				46C0A2B31B86C02A00D299E3 /* GUI.cpp */,
 				46C0A2B41B86C02A00D299E3 /* GUIBoxPanel.cpp */,
 				46C0A2B51B86C02A00D299E3 /* GUIPushButton.cpp */,
@@ -283,10 +287,10 @@
 				46C0A2C11B86C02A00D299E3 /* GUIText.cpp in Sources */,
 				E24CA0EB08074D51B4EAAE36 /* GeometryPlotterApp.cpp in Sources */,
 				46C0A2BC1B86C02A00D299E3 /* GUIBoxPanel.cpp in Sources */,
-				46C0A2B21B86C00A00D299E3 /* GUIFrontEnd.cpp in Sources */,
 				46C0A2C21B86C02A00D299E3 /* GUIToggleButton.cpp in Sources */,
 				46C0A2C01B86C02A00D299E3 /* GUISlider.cpp in Sources */,
 				46C0A2BD1B86C02A00D299E3 /* GUIPushButton.cpp in Sources */,
+				464E2FAC1B8CAE8D005C57B4 /* GUITabMenu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

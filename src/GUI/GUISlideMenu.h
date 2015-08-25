@@ -56,6 +56,8 @@ class GUISlideMenu : public GUIElement, public Resizable
         // Adjusts speed of extension
         float m_speedFactor;
         
+        float m_xOffset;
+        
         // How far down is the first menu item?
         float m_yOffset;
         

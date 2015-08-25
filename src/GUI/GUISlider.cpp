@@ -1,6 +1,6 @@
 #include "GUI.h"
 
-using namespace ci;
+
 
 GUISlider::GUISlider ()
 {
@@ -28,10 +28,13 @@ void GUISlider::draw (float x, float y)
 {
     float yGap = m_height / 2;
 
+    m_xPos = x;
+    m_yPos = y;
+    
     gl::lineWidth (10);
     gl::color (m_trackColor);
-    Vec2f p1 (x + m_xPos, y + yGap);
-    Vec2f p2 (x + m_xPos + m_length, y + yGap);
+    Vec2f p1 (m_xPos, m_yPos + yGap);
+    Vec2f p2 (m_xPos + m_length, m_yPos + yGap);
     gl::drawLine (p1, p2);
 
     if (m_mouseLock)
@@ -42,9 +45,11 @@ void GUISlider::draw (float x, float y)
     {
         gl::color (m_backColor);
     }
-    p1.set (x + m_bPos + m_xPos, y + yGap);
+    float xpos = m_bPos + m_xPos;
+    float ypos = m_yPos + yGap;
+    p1.set (xpos, ypos);
     gl::drawSolidCircle (p1, m_bRad);
-
+    
     gl::lineWidth (2);
     gl::color (m_highColor);
     gl::drawStrokedCircle (p1, m_bRad);
@@ -53,7 +58,7 @@ void GUISlider::draw (float x, float y)
 void GUISlider::update (float elapsedTime, Vec2i mouseLocation, bool mousePressed)
 {
     float xd = mouseLocation[0] - (m_xPos + m_bRad);
-    float yd = mouseLocation[1] - (m_width / 2);
+    float yd = mouseLocation[1] - (m_yPos + m_width / 2);
     float mouseDist = sqrtf (xd*xd + yd*yd);
 
     if (m_mouseLock && mousePressed)

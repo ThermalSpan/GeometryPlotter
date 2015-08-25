@@ -1,6 +1,8 @@
 #include "GeometryPlotterApp.h"
 #include "Resources.h"
 
+#include <iostream>
+
 void GeometryPlotterApp::prepareSettings( Settings *settings )
 {
     settings->setWindowSize( 800, 600 );
@@ -74,7 +76,15 @@ void GeometryPlotterApp::mouseDown (MouseEvent event)
         m_mousePressed = true;
     }
 
+    std::cout << "Mouse Down" << std::endl;
+    
     m_mayaCam.mouseDown (event.getPos ());
+}
+
+void GeometryPlotterApp::mouseUp (MouseEvent event)
+{
+    m_mousePressed = false;
+    std::cout << "Mouse Up" << std::endl;
 }
 
 
@@ -115,6 +125,7 @@ void GeometryPlotterApp::buildGUI ()
 
     sliderPtr s1 = std::make_shared <GUISlider> ();
     s1->SetXPos (30);
+    s1->SetBPos(0.0f);
     s1->SetLength (200);
     s1->SetbRad (15);
     s1->SetHeight (50.0f);

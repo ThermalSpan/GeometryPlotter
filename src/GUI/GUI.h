@@ -26,8 +26,6 @@
 #include "GUIToggleButton.h"
 #include "GUIToggleHandler.h"
 
-using namespace ci;
-
 class GUI
     {
     public:

@@ -2,7 +2,6 @@
 #include "cinder/gl/gl.h"
 #include "cinder/MayaCamUI.h"
 
-#include "GUIFrontEnd.h"
 
 #include "GUI/GUI.h"
 
@@ -26,7 +25,7 @@ public:
 
     void mouseDown (MouseEvent event);
 
-    void mouseReleased (MouseEvent event);
+    void mouseUp (MouseEvent event);
 
     void mouseDrag (MouseEvent event);
 
